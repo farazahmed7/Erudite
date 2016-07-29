@@ -11,6 +11,7 @@ class Search(models.Model):
 	
 class Subject(models.Model):
 	sub=models.TextField()
+	Search=models.ForeignKey(Search)
 	def __str__(self):
 		return self.sub	
 	
