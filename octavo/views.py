@@ -16,8 +16,7 @@ from rest_framework.decorators import api_view
 def showSubjects(request):
 	if request.method=="POST":
 		_sem=str(request.POST['sem'])
-		a=Search.objects.get(sem=_sem)
-		if (a.sem=="1"):	
+		if (_sem=="1"):	
 				b=Subject.objects.all()
 				ser=UserSerializer(b,many=True)
 				return Response(ser.data)
