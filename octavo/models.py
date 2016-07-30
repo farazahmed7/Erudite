@@ -11,7 +11,7 @@ class Genre(MPTTModel):
     name = models.CharField(max_length=50, unique=True)
     parent = TreeForeignKey('self', null=True, blank=True, related_name='children', db_index=True)
     def __str__(self):
-		return self.name	
+		return self.name
 
     class MPTTMeta:
         order_insertion_by = ['name']	
@@ -25,7 +25,7 @@ class Subject(MPTTModel):
 	sub=models.CharField(max_length=50, unique=True)
 	
 	def __str__(self):
-		return self.sub	
+		return self.sub
 	
 		
 	
