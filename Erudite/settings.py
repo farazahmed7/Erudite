@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'octavo',
 	'rest_framework',
+	'mptt',
 ]
 
 MIDDLEWARE_CLASSES = [
